@@ -21,7 +21,7 @@ Interactive Flutter Equalizer Animation
 
 ## show into dartpad
 
-<iframe src="https://dartpad.dev/embed-flutter.html?id=d45563969f8b818d541ce39051decba2" style="width:100%; height:700px"></iframe>
+<iframe src="https://dartpad.dev/?id=d45563969f8b818d541ce39051decba2?theme=light"></iframe>
 
 
 ## Contributions
