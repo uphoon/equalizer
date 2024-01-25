@@ -16,12 +16,12 @@ Interactive Flutter Equalizer Animation
 
 ## screenshot
 
-![equalizer_1](https://github.com/uphoon/equalizer/assets/3182587/7dfeeb7b-4ac2-472a-991f-536d005691f8)
+![equalizer_1](https://github.com/uphoon/equalizer/assets/3182587/8cf226c7-58e9-4024-a28f-b38af1692eea)
 
 
-## show into dartpad
+## dartpad
 
-<iframe src="https://dartpad.dev/?id=d45563969f8b818d541ce39051decba2?theme=light"></iframe>
+[![DartPad](https://github.com/uphoon/equalizer/assets/3182587/0f9ac0b2-0d90-497a-929d-b47d0d9f6bfb)](https://dartpad.dev/?id=d45563969f8b818d541ce39051decba2)
 
 
 ## Contributions
