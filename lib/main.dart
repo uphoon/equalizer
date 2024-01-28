@@ -12,20 +12,40 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(home: Scaffold(body: Center(child: Equalizer()))));
+  runApp(MaterialApp(
+    home: Scaffold(
+      body: Center(
+        child: Equalizer.event(
+          onPress: () {
+            print("onPress");
+          },
+          isPlaying: false,
+        ),
+      ),
+    ),
+  ));
 }
 
 class Equalizer extends StatefulWidget {
-  const Equalizer({super.key});
+  Function? onPress;
+  bool isPlaying = false;
+
+  Equalizer({super.key});
+
+  Equalizer.event({required this.onPress, this.isPlaying = false, Key? key})
+      : super(key: key);
 
   @override
-  _EqualizerState createState() => _EqualizerState();
+  EqualizerState createState() => EqualizerState(onPress, isPlaying);
 }
 
-class _EqualizerState extends State<Equalizer>
+class EqualizerState extends State<Equalizer>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  bool isPlaying = false;
+  Function? onPress;
+  bool isPlaying;
+
+  EqualizerState(this.onPress, this.isPlaying);
 
   @override
   void initState() {
@@ -44,6 +64,12 @@ class _EqualizerState extends State<Equalizer>
 
   @override
   Widget build(BuildContext context) {
+    if (isPlaying) {
+      _controller.repeat(reverse: true);
+    } else {
+      _controller.stop();
+    }
+
     return GestureDetector(
       onTap: _toggleAnimation,
       child: AnimatedBuilder(
@@ -59,6 +85,8 @@ class _EqualizerState extends State<Equalizer>
   }
 
   void _toggleAnimation() {
+    if (onPress != null) onPress!();
+
     setState(() {
       isPlaying = !isPlaying;
       if (isPlaying) {
