@@ -2,7 +2,7 @@
  * Author: Yi Sanghoon
  * Email: uphoon@gmail.com
  * Created Date: 2024-01-25
- * Last Modified: 2024-01-25
+ * Last Modified: 2024-01-28
  * Description:
  *  This file is used for creating the Equalizer animation
  * using CustomPainter and AnimationController 
