@@ -51,7 +51,7 @@ Equalizer 위젯을 사용하려면, 위젯 트리에 간단히 포함시키면 
                 print("hello sound");
             },
             isPlaying: true,
-            ),
+        ),
 ...
 ```
 
